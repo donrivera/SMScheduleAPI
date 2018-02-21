@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "\\app\\Http",
+    "\\app\\Modules\\User",
+    "\\app\\Modules\\User\\Controllers",
+    "\\public",
+    "\\public\\scripts",
+    "\\public\\views",
+    "\\resources\\views"
+  ],
+  "SelectedNode": "\\public\\views\\authView.html",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,9 @@
+#PHP ARTISAN SERVE#
+php -S localhost:8000 -t public/
+php artisan serve --host mysite.com --port 8000
+#PHP CLEAR CONFIG AFTER UPDATE#
+php artisan config:clear
+#adjusted auth.config pointed model user to modules/user/models/user
+#delete cache file
+composer dump-autoload
+php artisan cache:clear

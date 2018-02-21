@@ -1,0 +1,128 @@
+<!-- public/views/userView.html -->
+<!--
+<div class="col-sm-6 col-sm-offset-3">
+  <div class="well">
+    <h5 ng-if="authenticated">Welcome,{{currentUser.name}} {{currentUser.user_type}}</h5>
+    <h3>Users</h3>
+    <div class="buttons" style="margin-bottom: 10px">
+      <button class="btn btn-primary" ng-click="user.getUsers()">Get Users!</button>
+      <button class="btn btn-danger" ng-click="user.logout()">Logout</button>
+    </div>
+	
+    <ul class="list-group" ng-if="user.users">
+      <li class="list-group-item" ng-repeat="user in user.users">
+        <h4>{{user.name}}</h4>
+        <h5>{{user.email}}</h5>
+      </li>
+    </ul>
+    <div class="alert alert-danger" ng-if="user.error">
+      <strong>There was an error: </strong> 
+      <br>Please go back and login again
+    </div>
+  </div>
+</div>
+-->
+<?php
+
+include('../partials/header.html');
+?>
+<header ng-include="'partials/header.html'">                    
+</header>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+	
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <!--<li><a href="#">Contact</a></li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+		
+        <li>
+			<a href="#">Welcome,</a>
+			<a href="#" ng-click="user.logout()"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+		</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <style>
+  .list-group.panel > .list-group-item {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px
+}
+  </style>
+<div class="container-fluid text-center">    
+  <div class="row content">
+	
+    <div class="col-sm-2 sidenav">
+		<!--
+		<p><a href="#">Schedule</a></p>
+		<p><a href="#">Reports</a></p>
+		<p><a href="#">Maintenance</a></p>
+		-->
+		<!-- menu -->
+      <div id="MainMenu">
+        <div class="list-group panel">
+          <a href="/" class="list-group-item list-group-item-success" data-parent="#MainMenu">Item 1</a>
+          <a href="#" class="list-group-item list-group-item-success" data-parent="#MainMenu">Item 2</a>
+          <a href="#demo3" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Item 3 <i class="fa fa-caret-down"></i></a>
+          <div class="collapse" id="demo3">
+            <a href="#SubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1">Subitem 1 <i class="fa fa-caret-down"></i></a>
+            <div class="collapse list-group-submenu" id="SubMenu1">
+              <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 1 a</a>
+              <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 2 b</a>
+              <a href="#SubSubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubSubMenu1">Subitem 3 c <i class="fa fa-caret-down"></i></a>
+              <div class="collapse list-group-submenu list-group-submenu-1" id="SubSubMenu1">
+                <a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 1</a>
+                <a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 2</a>
+              </div>
+              <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 4 d</a>
+            </div>
+            <a href="javascript:;" class="list-group-item">Subitem 2</a>
+            <a href="javascript:;" class="list-group-item">Subitem 3</a>
+          </div>
+          <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Item 4  <i class="fa fa-caret-down"></i></a>
+          <div class="collapse" id="demo4">
+            <a href="" class="list-group-item">Subitem 1</a>
+            <a href="" class="list-group-item">Subitem 2</a>
+            <a href="" class="list-group-item">Subitem 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	 
+    <div class="col-sm-10 text-left"> 
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+      <h3>Test</h3>
+      <p>Lorem ipsum...</p>
+    </div>
+	<!--
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+	-->
+  </div>
+</div>
+<div ng-include src="'views/partials/footer.html'"></div>
+<!--<footer ng-include="'partials/footer.html'"></footer>-->
+
